@@ -3,7 +3,7 @@
 class Tile
 {
     protected $sprite;
-    protected $z_index;
+    protected $height;
     protected $flag;
 
 
@@ -12,9 +12,9 @@ class Tile
         return $this->sprite;
     }
 
-    public function getZ_index()
+    public function getHeight()
     {
-        return $this->z_index;
+        return $this->height;
     }
 
     public function getFlag()
@@ -27,9 +27,9 @@ class Tile
         $this->sprite = $sprite;
     }
 
-    public function setZ_index($z_index)
+    public function setHeight($height)
     {
-        $this->z_index = $z_index;
+        $this->height = $height;
     }
 
     public function setFlag($flag)

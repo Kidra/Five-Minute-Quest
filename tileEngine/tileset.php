@@ -3,12 +3,25 @@
 class Tileset
 {
 	private $rows = array();
+	private $collision = array();
 	private $size;
 	private $name;
 	
 	public function __construct($path)
 	{
 		$this->load_tileset($path);
+		$this->load_collision();
+	}
+	
+	private function load_collision()
+	{
+		foreach($this->get_rows() as $row => $columns)
+		{
+			foreach($columns as $col => $tile)
+			{
+				$this->collision[$row][$col] = $tile->getFlag();
+			}
+		}
 	}
 	
 	public function load_tileset($path = false)
@@ -25,6 +38,8 @@ class Tileset
 			{
     			$tile = new Tile();
     			$tile->setSprite($tile_info->Sprite);
+    			$tile->setFlag($tile_info->Flag);
+    			$tile->setHeight($tile_info->Height);
     			$this->set_tile($tile, $row, $col);
 			}
 		}
