@@ -2,7 +2,9 @@
 
 class Tileset
 {
-	private $tiles = array();
+	private $rows = array();
+	private $size;
+	private $name;
 	
 	public function __construct($path)
 	{
@@ -11,7 +13,21 @@ class Tileset
 	
 	public function load_tileset($path = false)
 	{
-		$this->tiles = $this->load_tileset_data($path);
+		$tiles = $this->load_tileset_data($path);
+		
+		$this->size = $tiles->Size;
+		$this->name = $tiles->Name;
+		$this->base_tile = $tiles->Base_Tile;
+		
+		foreach($tiles->Rows as $row => $column)
+		{
+			foreach($column->Tiles as $col => $tile_info)
+			{
+    			$tile = new Tile();
+    			$tile->setSprite($tile_info->Sprite);
+    			$this->set_tile($tile, $row, $col);
+			}
+		}
 	}
 	
 	private function load_tileset_data($path)
@@ -22,26 +38,46 @@ class Tileset
 		return json_decode(file_get_contents($path));
 	}
 	
-	public function get_tiles()
+	public function set_tile(Tile $tile, $row, $col)
 	{
-		return $this->tiles;
+		$this->rows[$row][$col] = $tile;
+	}
+	
+	public function get_rows()
+	{
+		return $this->rows;
+	}
+	
+	public function number_of_rows()
+	{
+		return count($this->get_rows());
+	}
+	
+	public function number_of_columns()
+	{
+		return count($this->rows[0]);
 	}
 	
 	public function generate_image()
 	{
-		$tiles = $this->get_tiles();
+		$rows = $this->get_rows();
 		
-    	$image = imagecreate($tiles->Size * (count($tiles->Rows)), $tiles->Size * (count($tiles->Rows)));
+    	$image = imagecreate($this->get_size() * $this->number_of_rows(), $this->get_size() * $this->number_of_rows());
     
-        foreach($tiles->Rows as $row => $columns)
+        foreach($rows as $row => $columns)
         {
-        	foreach($columns->Tiles as $col => $tile_info)
+        	foreach($columns as $col => $tile_info)
         	{
-        		$tile = imagecreatefrompng($tile_info->Sprite);
-        		imagecopy($image, $tile, $row * $tiles->Size, $col * $tiles->Size, 0, 0, $tiles->Size, $tiles->Size);
+        		$tile = imagecreatefrompng($tile_info->getSprite());
+        		imagecopy($image, $tile, $row * $this->get_size(), $col * $this->get_size(), 0, 0, $this->get_size(), $this->get_size());
         	}
         }
         
-        return imagepng($image);
+        return $image;
+	}
+	
+	public function get_size()
+	{
+		return $this->size;
 	}
 }

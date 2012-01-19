@@ -2,15 +2,10 @@
 
 class Tile
 {
-    protected $size;
     protected $sprite;
     protected $z_index;
     protected $flag;
 
-    public function getSize()
-    {
-        return $this->size;
-    }
 
     public function getSprite()
     {
@@ -25,11 +20,6 @@ class Tile
     public function getFlag()
     {
         return $this->flag;
-    }
-
-    public function setSize($size)
-    {
-        $this->size = $size;
     }
 
     public function setSprite($sprite)
