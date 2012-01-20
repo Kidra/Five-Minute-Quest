@@ -215,7 +215,7 @@
 				{	
 					"Sprite" : "images/tilesets/forest/grass_1.png",
 					"Height" : 0,
-					"Flag"   : 1
+					"Flag"   : 0
 				},
 				{	
 					"Sprite" : "images/tilesets/forest/grass_1.png",

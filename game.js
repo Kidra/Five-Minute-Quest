@@ -2,6 +2,11 @@
 document.body.appendChild(canvas);
 document.body.appendChild(collision_canvas);
 
+DOWN  = 0;
+UP    = 32;
+LEFT  = 64;
+RIGHT = 96; 
+
 // Background image
 var bgReady = false;
 var bgImage = new Image();
@@ -26,7 +31,7 @@ var heroImage = new Image();
 heroImage.onload = function() {
 	heroReady = true;
 }
-heroImage.src = "images/hero.png";
+heroImage.src = "images/sprites/hero1.png";
 
 // monster image
 var monsterReady = false;
@@ -39,7 +44,7 @@ monsterImage.src = "images/monster.png";
 // Game objects
 var hero = {
 	speed : 256,
-	direction : "down",
+	direction : DOWN,
 	size: 32,
 	l: [0, 0],
 	r: [0, 0],
@@ -78,25 +83,25 @@ var update = function(modifier) {
 	if (38 in keysDown) { // player holding up
 		if (hero.y > 0 && ! detect_collision(hero.t)) {
 			hero.y -= momentum;
-			hero.direction = "up";
+			hero.direction = UP;
 		}
 	}
 	if (40 in keysDown) { // player holding down
 		if (hero.y < (canvas.height - 32)  && ! detect_collision(hero.b)) {
 			hero.y += momentum;
-			hero.direction = "down";
+			hero.direction = DOWN;
 		}
 	}
 	if (37 in keysDown) { // player holding left
 		if (hero.x > 0 && ! detect_collision(hero.l)) {
 			hero.x -= momentum;
-			hero.direction = "left";
+			hero.direction = LEFT;
 		}
 	}
 	if (39 in keysDown) { // player holding right
 		if (hero.x < (canvas.width - 32)  && ! detect_collision(hero.r)) {
 			hero.x += momentum;
-			hero.direction = "right";
+			hero.direction = RIGHT;
 		}
 	}
 }
@@ -120,8 +125,8 @@ var render = function(delta) {
 		cltx.drawImage(colBgImage, 0, 0);
 	}
 	if (heroReady) {
-		ctx.drawImage(heroImage, hero.x, hero.y);
-		cltx.drawImage(heroImage, hero.x, hero.y);
+		ctx.drawImage(heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+		cltx.drawImage(heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
 	}
 	if (monsterReady) {
 		ctx.drawImage(monsterImage, monster.x, monster.y);
