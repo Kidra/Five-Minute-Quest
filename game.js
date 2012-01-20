@@ -3,9 +3,9 @@ document.body.appendChild(canvas);
 document.body.appendChild(collision_canvas);
 
 DOWN  = 0;
-UP    = 32;
-LEFT  = 64;
-RIGHT = 96; 
+UP    = (1 * size);
+LEFT  = (2 * size);
+RIGHT = (3 * size);
 
 // Background image
 var bgReady = false;
@@ -46,13 +46,13 @@ var hero = {
 	speed : 256,
 	direction : DOWN,
 	size: 32,
-	l: [0, 0],
-	r: [0, 0],
-	t: [0, 0],
-	b: [0, 0],
+	tl: [0, 0],
+	tr: [0, 0],
+	bl: [0, 0],
+	br: [0, 0],
 	x : 0,
 	y : 0
-}
+};
 
 var monster = {
 	x : 0,
@@ -75,43 +75,64 @@ var update = function(modifier) {
 	var collide = false;
 	var momentum = Math.round(hero.speed * modifier);
 	
-	hero.l = [hero.x - 1, hero.y + (hero.size / 2)];
-	hero.r = [hero.x + hero.size + 1, hero.y + (hero.size / 2)];
-	hero.t = [hero.x + (hero.size / 2), hero.y - 1];
-	hero.b = [hero.x + (hero.size / 2), hero.y + hero.size + 1];
+	hero.tl = [hero.x, hero.y];
+	hero.tr = [hero.x + hero.size, hero.y];
+	hero.bl = [hero.x, hero.y + hero.size];
+	hero.br = [hero.x + hero.size, hero.y + hero.size];
 
 	if (38 in keysDown) { // player holding up
-		if (hero.y > 0 && ! detect_collision(hero.t)) {
+		if ( ! detect_collision(
+				[ hero.tl[0], hero.tl[1] - 1 ],
+				[ hero.tr[0], hero.tr[1] - 1 ]
+			)) {
 			hero.y -= momentum;
 			hero.direction = UP;
 		}
 	}
 	if (40 in keysDown) { // player holding down
-		if (hero.y < (canvas.height - 32)  && ! detect_collision(hero.b)) {
+		if ( ! detect_collision(
+				[ hero.bl[0], hero.bl[1] + 1 ],
+				[ hero.br[0], hero.br[1] + 1 ]
+			)) {
 			hero.y += momentum;
 			hero.direction = DOWN;
 		}
 	}
 	if (37 in keysDown) { // player holding left
-		if (hero.x > 0 && ! detect_collision(hero.l)) {
+		if ( ! detect_collision(
+				[ hero.tl[0] - 1, hero.tl[1] ],
+				[ hero.bl[0] - 1, hero.bl[1] ]
+			)) {
 			hero.x -= momentum;
 			hero.direction = LEFT;
 		}
 	}
 	if (39 in keysDown) { // player holding right
-		if (hero.x < (canvas.width - 32)  && ! detect_collision(hero.r)) {
+		if ( ! detect_collision(
+				[ hero.tr[0] + 1, hero.tr[1] ],
+				[ hero.br[0] + 1, hero.br[1] ]
+			)) {
 			hero.x += momentum;
 			hero.direction = RIGHT;
 		}
 	}
 }
 
-function detect_collision(points)
+function detect_collision(point1, point2)
 {
-	var pix = cltx.getImageData(points[0], points[1], 1, 1).data;
-	if(pix[0] == 0 && pix[1] == 0 && pix[2] == 0)
+	var difference_x = point2[0] - point1[0];
+	var difference_y = point2[1] - point1[1];
+	
+	if(difference_x == 0) { difference_x = 1; }
+	if(difference_y == 0) { difference_y = 1; }
+	
+	var pix = cltx.getImageData(point1[0], point1[1], difference_x, difference_y).data;
+	for(var i = 0; i < pix.length; i += 4)
 	{
-		return true;
+		if(pix[i] == 0 && pix[i+1] == 0 && pix[i+2] == 0)
+		{
+			return true;
+		}
 	}
 	return false;
 }
