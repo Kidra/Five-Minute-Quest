@@ -7,42 +7,31 @@ UP    = (1 * size);
 LEFT  = (2 * size);
 RIGHT = (3 * size);
 
-// Background image
-var bgReady = false;
-var bgImage = new Image();
 
-bgImage.onload = function() {
-	bgReady = true;
-}
-bgImage.src = returnedBgImage;
+// what it says on the tin
+function imageLoader(sources, callback) {
+	var images = [];
+	var loadedImages = 0;
+	var numImages = 0;
+	for (var src in sources) {
+        numImages++;
+    }
+	for (var src in sources) {
+		images[src] = new Image();
+		images[src].onload = function() {
+			if(++loadedImages >= numImages) {
+				//callback(images);
+			}
+		};
+		images[src].src = sources[src];
+	}
+	return images;
+};
 
-//Background image
-var colBgReady = false;
-var colBgImage = new Image();
-
-colBgImage.onload = function() {
-	colBgReady = true;
-}
-colBgImage.src = collisionBgMap;
-
-// Hero image
-var heroReady = false;
-var heroImage = new Image();
-heroImage.onload = function() {
-	heroReady = true;
-}
-heroImage.src = "images/sprites/hero1.png";
-
-// monster image
-var monsterReady = false;
-var monsterImage = new Image();
-monsterImage.onload = function() {
-	monsterReady = true;
-}
-monsterImage.src = "images/monster.png";
 
 // Game objects
 var hero = {
+	id: "hero",
 	speed : 256,
 	direction : DOWN,
 	moveable: true,
@@ -58,6 +47,7 @@ var hero = {
 };
 
 var monster = {
+	id: "mike",
 	size: 32,
 	x : 0,
 	y : 0
@@ -165,18 +155,18 @@ function detect_collision(point1, point2)
 
 // Draw everything
 var render = function(delta) {
-	if (bgReady) {
-		ctx.drawImage(bgImage, 0, 0);
+	if (Content.bgImage) {
+		ctx.drawImage(Content.bgImage, 0, 0);
 	}
-	if(colBgReady) {
-		cltx.drawImage(colBgImage, 0, 0);
+	if(Content.colBgImage) {
+		cltx.drawImage(Content.colBgImage, 0, 0);
 	}
-	if (heroReady) {
-		ctx.drawImage(heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-		cltx.drawImage(heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+	if (Content.heroImage) {
+		ctx.drawImage(Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+		cltx.drawImage(Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
 	}
-	if (monsterReady) {
-		ctx.drawImage(monsterImage, monster.x, monster.y);
+	if (Content.monsterImage) {
+		ctx.drawImage(Content.monsterImage, monster.x, monster.y);
 		cltx.fillStyle = "rgb(255, 0, 0)";
 		cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
 	}
@@ -211,5 +201,15 @@ var main = function() {
 }
 
 reset();
+
+var sources = {
+	heroImage: 'images/sprites/hero1.png',
+	monsterImage: 'images/monster.png',
+	colBgImage: collisionBgMap,
+	bgImage: returnedBgImage
+}
+
+Content = imageLoader(sources);
+
 var then = Date.now();
 setInterval(main, 1);

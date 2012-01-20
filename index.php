@@ -13,7 +13,7 @@ $url = getcwd();
 
 $level = new FMQ\TileEngine\Level();
 $level->set_name('Test Level');
-$level->add_tileset(new FMQ\TileEngine\Tileset($url."\\json\\maps\\level1.json"));
+$level->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
 
 $background = $level->render_level();
 $collision_map = $level->render_collision_map();
