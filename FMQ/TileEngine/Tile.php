@@ -1,5 +1,7 @@
 <?php
 
+namespace FMQ\TileEngine;
+
 class Tile
 {
     protected $sprite;

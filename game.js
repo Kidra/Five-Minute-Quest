@@ -1,10 +1,4 @@
 // create the canvas
-var canvas = document.createElement("canvas");
-var ctx    = canvas.getContext("2d");
-
-canvas.width  = 512;
-canvas.height = 480;
-
 document.body.appendChild(canvas);
 
 
@@ -48,18 +42,6 @@ var monster = {
 }
 
 var monstersCaught = 0;
-
-
-// Input Handler
-var keysDown = {};
-
-addEventListener("keydown", function(e) {
-  keysDown[e.keyCode] = true;
-}, false);
-
-addEventListener("keyup", function(e){
-  delete keysDown[e.keyCode];
-}, false);
 
 
 // Reset the game when the player catches a monster

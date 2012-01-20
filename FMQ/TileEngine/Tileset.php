@@ -1,5 +1,7 @@
 <?php
 
+namespace FMQ\TileEngine;
+
 class Tileset
 {
 	private $rows = array();
@@ -22,6 +24,11 @@ class Tileset
 				$this->collision[$row][$col] = $tile->getFlag();
 			}
 		}
+	}
+	
+	public function get_collision()
+	{
+		return $this->collision;
 	}
 	
 	public function load_tileset($path = false)
