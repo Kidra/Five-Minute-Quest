@@ -8,8 +8,6 @@ require 'tileEngine/tileset.php';
 require 'tileEngine/tile.php';
 require 'tileEngine/level.php';
 
-//$tileset = new Tileset("json/maps/level1.json");
-
 $level = new level();
 $level->add_tileset(new Tileset("json/maps/level1.json"));
 
