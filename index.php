@@ -8,9 +8,12 @@ require 'tileEngine/tileset.php';
 require 'tileEngine/tile.php';
 require 'tileEngine/level.php';
 
+$url = getcwd();
+
 $level = new level();
-$level->add_tileset(new Tileset("json/maps/level1.json"));
+$level->set_name('Test Level');
+$level->add_tileset(new Tileset($url."\\json\\maps\\level1.json"));
 
-header('content-type: image/png');
+//header('content-type: image/png');
 
-$level->render_level();
+$test = $level->render_level();

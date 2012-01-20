@@ -13,7 +13,9 @@
 <body>
   
 </body>
-<script type="text/javascript" src="game.js">
-var returnedBgImage = "images/background.png";
+<script type="text/javascript">
+var returnedBgImage = "<?php echo $test?>";
 </script>
+
+<script type="text/javascript" src="game.js"></script>
 </html>

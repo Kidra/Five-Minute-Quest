@@ -4,10 +4,26 @@ class Level
 {
 	protected $tilesets        = array();
 	protected $collision_layer = array();
+	protected $name;
 	
 	public function __construct()
 	{
 		
+	}
+	
+	public function set_name($name)
+	{
+		$this->name = $name;
+	}
+	
+	public function get_name()
+	{
+		return $this->name;
+	}
+	
+	public function get_hashed_name()
+	{
+		return substr(md5($this->get_name()), 0, 8);
 	}
 	
 	public function get_tilesets()
@@ -32,6 +48,11 @@ class Level
 	
 	public function render_level()
 	{
+		if(is_file(getcwd().$this->get_hashed_name()))
+		{
+			return '/FMQ/cached/'.$this->get_hashed_name().'.png';
+		}
+		
 		$tilesets  = $this->get_tilesets();
 		$size = $tilesets[0]->get_size();
 		$total_height = ($tilesets[0]->number_of_rows() * $size);
@@ -45,11 +66,8 @@ class Level
 			imagecopy($image, $tile, 0, 0, 0, 0, $total_width, $total_height);
 		}
 		
-		return imagepng($image);
-	}
-	
-	public function load_collision()
-	{
+		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'.png');
 		
+		return '/FMQ/cached/'.$this->get_hashed_name().'.png';
 	}
 }
