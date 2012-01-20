@@ -21,7 +21,10 @@ class Tileset
 		{
 			foreach($columns as $col => $tile)
 			{
-				$this->collision[$row][$col] = $tile->getFlag();
+				$this->collision[] = array(
+					(($row + 1) * $this->get_size()),
+					(($col + 1) * $this->get_size())
+			    );
 			}
 		}
 	}
