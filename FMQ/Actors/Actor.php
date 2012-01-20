@@ -1,48 +1,149 @@
 <?php
 
+namespace FMQ\Actors;
+
 abstract class Actor
 {
-	protected $id;
-	protected $name;
-	protected $direction;
-	protected $coords;
-	
-	protected function getId() {
-		return $this->id;
-	}
+    protected $id;
+    protected $name;
+    protected $direction;
+    protected $x;
+    protected $y;
+    protected $size;
 
-	protected function getName() {
-		return $this->name;
-	}
+    protected $tl = array();
+    protected $tr = array();
+    protected $bl = array();
+    protected $br = array();
 
-	protected function getSpeed() {
-		return $this->speed;
-	}
+    protected $conversable;
 
-	protected function getDirection() {
-		return $this->direction;
-	}
+    protected function get_id()
+    {
+        return $this->id;
+    }
 
-	protected function getCoords() {
-		return $this->coords;
-	}
+    protected function get_name()
+    {
+        return $this->name;
+    }
 
-	protected function setId($id) {
-		$this->id = $id;
-	}
+    protected function get_speed()
+    {
+        return $this->speed;
+    }
 
-	protected function setName($name) {
-		$this->name = $name;
-	}
+    protected function get_direction()
+    {
+        return $this->direction;
+    }
 
-	protected function setDirection($direction) {
-		$this->direction = $direction;
-	}
+    protected function set_id($id)
+    {
+        $this->id = $id;
+    }
 
-	protected function setCoords($coords) {
-		$this->coords = $coords;
-	}
+    protected function set_name($name)
+    {
+        $this->name = $name;
+    }
 
-	
-	
+    protected function set_direction($direction)
+    {
+        $this->direction = $direction;
+    }
+
+    protected function load_data($path)
+    {
+        if (!$path)
+            throw new InvalidArgumentException("load_data: path not specified.");
+
+        return json_decode(file_get_contents($path));
+    }
+
+    protected function get_tl()
+    {
+        return $this->tl;
+    }
+
+    protected function get_tr()
+    {
+        return $this->tr;
+    }
+
+    protected function get_bl()
+    {
+        return $this->bl;
+    }
+
+    protected function get_br()
+    {
+        return $this->br;
+    }
+
+    protected function set_tl($tl)
+    {
+        $this->tl = $tl;
+    }
+
+    protected function set_tr($tr)
+    {
+        $this->tr = $tr;
+    }
+
+    protected function set_bl($bl)
+    {
+        $this->bl = $bl;
+    }
+
+    protected function set_br($br)
+    {
+        $this->br = $br;
+    }
+
+    protected function set_size($size)
+    {
+        $this->size = $size;
+    }
+
+    protected function get_size()
+    {
+        return $this->size;
+    }
+
+    protected function set_x($x)
+    {
+        $this->x = $x;
+    }
+
+    protected function set_y($y)
+    {
+        $this->y = $y;
+    }
+
+    protected function get_x()
+    {
+        return $this->x;
+    }
+
+    protected function get_y()
+    {
+        return $this->y;
+    }
+
+    protected function get_conversable()
+    {
+        return $this->conversable;
+    }
+
+    protected function set_conversable($conversable)
+    {
+        $this->conversable = $conversable;
+    }
+    
+    public function render_json()
+    {
+    	return get_object_vars($this);
+    }
+
 }

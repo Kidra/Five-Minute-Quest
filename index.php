@@ -15,8 +15,15 @@ $level = new FMQ\TileEngine\Level();
 $level->set_name('Test Level');
 $level->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
 
+$actor_manager = new FMQ\Actors\Actor_Manager();
+
+$actor_manager->add_actor(new FMQ\Actors\Player($url."/json/characters/hero.json"));
+
+$hero = $actor_manager->get_actors();
+
 $background = $level->render_level();
 $collision_map = $level->render_collision_map();
 $width  = $level->get_width();
 $height = $level->get_height();
-$collision = json_encode($level->get_collision_layers());
+
+$hero = json_encode($hero[0]->render_json());

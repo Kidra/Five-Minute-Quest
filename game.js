@@ -30,21 +30,21 @@ function imageLoader(sources, callback) {
 
 
 // Game objects
-var hero = {
-	id: "hero",
-	speed : 256,
-	direction : DOWN,
-	moveable: true,
-	conversable: false,
-	in_conversation: false,
-	size: 32,
-	tl: [0, 0],
-	tr: [0, 0],
-	bl: [0, 0],
-	br: [0, 0],
-	x : 0,
-	y : 0
-};
+//var hero = {
+//	id: "hero",
+//	speed : 256,
+//	direction : DOWN,
+//	moveable: true,
+//	conversable: false,
+//	in_conversation: false,
+//	size: 32,
+//	tl: [0, 0],
+//	tr: [0, 0],
+//	bl: [0, 0],
+//	br: [0, 0],
+//	x : 0,
+//	y : 0
+//};
 
 var monster = {
 	id: "mike",

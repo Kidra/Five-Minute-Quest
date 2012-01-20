@@ -33,7 +33,7 @@ var size = 32;
 var returnedBgImage = "<?php echo $background?>";
 var collisionBgMap = "<?php echo $collision_map?>";
 
-var collision = <?php echo $collision?>;
+var hero = <?php echo $hero?>;
 </script>
 
 <script type="text/javascript" src="game.js"></script>
