@@ -60,14 +60,14 @@ class Level
 		$this->tilesets[] = $tileset;
 	}
 	
-	public function get_collision_layer()
+	public function get_collision_layers()
 	{
-		return $this->collision_layer;
+		return $this->collision_layers;
 	}
 	
-	public function set_collision_layer($layer)
+	public function set_collision_layers($layer)
 	{
-		$this->collision_layer = $layer;
+		$this->collision_layers = $layer;
 	}
 	
 	public function render_level()
@@ -89,7 +89,7 @@ class Level
 		
 		foreach($tilesets as $tileset)
 		{
-			$this->set_collision_layer($tileset->get_collision());
+			$this->set_collision_layers($tileset->get_collision());
 			$tile = $tileset->generate_image();
 			imagecopy($image, $tile, 0, 0, 0, 0, $total_width, $total_height);
 		}
@@ -97,5 +97,31 @@ class Level
 		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'.png');
 		
 		return '/FMQ/cached/'.$this->get_hashed_name().'.png';
+	}
+	
+	public function render_collision_map()
+	{
+		$collision_layers = $this->get_collision_layers();
+		$total_height = $this->get_height();
+		$total_width = $this->get_width();
+		
+		$image = imagecreatetruecolor($total_width, $total_height);
+		$white = imagecolorallocate($image, 255, 255, 255);
+		imagefill($image, 0, 0, $white);
+		
+		foreach($collision_layers as $collision_layer)
+		{
+			$x = $collision_layer[0];
+			$y = $collision_layer[1];
+			
+			$tile = imagecreatetruecolor(32, 32);
+			$black = imagecolorallocate($tile, 0, 0, 0);
+			imagefill($tile, 0, 0, $black);
+			imagecopy($image, $tile, $x, $y, 0, 0, 32, 32);
+		}
+		
+		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'_col.png');
+		
+		return '/FMQ/cached/'.$this->get_hashed_name().'_col.png';
 	}
 }

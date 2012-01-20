@@ -16,6 +16,7 @@ $level->set_name('Test Level');
 $level->add_tileset(new FMQ\TileEngine\Tileset($url."\\json\\maps\\level1.json"));
 
 $background = $level->render_level();
+$collision_map = $level->render_collision_map();
 $width  = $level->get_width();
 $height = $level->get_height();
-$collision = json_encode($level->get_collision_layer());
+$collision = json_encode($level->get_collision_layers());

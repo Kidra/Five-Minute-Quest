@@ -18,10 +18,19 @@
 var canvas = document.createElement("canvas");
 var ctx    = canvas.getContext("2d");
 
+var collision_canvas = document.createElement("canvas");
+var cltx = collision_canvas.getContext("2d");
+
 canvas.width  = <?php echo $width?>;
 canvas.height = <?php echo $height?>;
+collision_canvas.width  = <?php echo $width?>;
+collision_canvas.height = <?php echo $height?>;
+
+var size = 32;
+
 
 var returnedBgImage = "<?php echo $background?>";
+var collisionBgMap = "<?php echo $collision_map?>";
 
 var collision = <?php echo $collision?>;
 </script>

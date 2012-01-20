@@ -12,21 +12,6 @@ class Tileset
 	public function __construct($path)
 	{
 		$this->load_tileset($path);
-		$this->load_collision();
-	}
-	
-	private function load_collision()
-	{
-		foreach($this->get_rows() as $row => $columns)
-		{
-			foreach($columns as $col => $tile)
-			{
-				$this->collision[] = array(
-					(($row + 1) * $this->get_size()),
-					(($col + 1) * $this->get_size())
-			    );
-			}
-		}
 	}
 	
 	public function get_collision()
@@ -51,6 +36,15 @@ class Tileset
     			$tile->setFlag($tile_info->Flag);
     			$tile->setHeight($tile_info->Height);
     			$this->set_tile($tile, $row, $col);
+    			
+    			// if impassable terrain
+    			if($tile_info->Flag == 0)
+    			{
+        			$this->collision[] = array(
+    					($row * $this->get_size()),
+    					($col * $this->get_size())
+        			);
+    			}
 			}
 		}
 	}
@@ -58,7 +52,7 @@ class Tileset
 	private function load_tileset_data($path)
 	{
 		if( ! $path)
-			throw new Exception("load_tileset: path not specified.");
+			throw new InvalidArgumentException("load_tileset: path not specified.");
 		
 		return json_decode(file_get_contents($path));
 	}

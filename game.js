@@ -1,5 +1,6 @@
 // create the canvas
 document.body.appendChild(canvas);
+document.body.appendChild(collision_canvas);
 
 // Background image
 var bgReady = false;
@@ -9,6 +10,15 @@ bgImage.onload = function() {
 	bgReady = true;
 }
 bgImage.src = returnedBgImage;
+
+//Background image
+var colBgReady = false;
+var colBgImage = new Image();
+
+colBgImage.onload = function() {
+	colBgReady = true;
+}
+colBgImage.src = collisionBgMap;
 
 // Hero image
 var heroReady = false;
@@ -30,6 +40,11 @@ monsterImage.src = "images/monster.png";
 var hero = {
 	speed : 256,
 	direction : "down",
+	size: 32,
+	l: [0, 0],
+	r: [0, 0],
+	t: [0, 0],
+	b: [0, 0],
 	x : 0,
 	y : 0
 }
@@ -49,40 +64,51 @@ var reset = function() {
 	monster.y = 32 + (Math.random() * (canvas.height - 64));
 }
 
-console.log(collision[0][0]);
-console.log(collision[0][1]);
-console.log(collision[1][1]);
-
 // Update game objects
 var update = function(modifier) {
 
 	var collide = false;
 	var momentum = Math.round(hero.speed * modifier);
+	
+	hero.l = [hero.x - 1, hero.y + (hero.size / 2)];
+	hero.r = [hero.x + hero.size + 1, hero.y + (hero.size / 2)];
+	hero.t = [hero.x + (hero.size / 2), hero.y - 1];
+	hero.b = [hero.x + (hero.size / 2), hero.y + hero.size + 1];
 
 	if (38 in keysDown) { // player holding up
-		if (hero.y >= 0) {
+		if (hero.y > 0 && ! detect_collision(hero.t)) {
 			hero.y -= momentum;
 			hero.direction = "up";
 		}
 	}
 	if (40 in keysDown) { // player holding down
-		if (hero.y <= (canvas.height - 32)) {
+		if (hero.y < (canvas.height - 32)  && ! detect_collision(hero.b)) {
 			hero.y += momentum;
 			hero.direction = "down";
 		}
 	}
 	if (37 in keysDown) { // player holding left
-		if (hero.x >= 0) {
+		if (hero.x > 0 && ! detect_collision(hero.l)) {
 			hero.x -= momentum;
 			hero.direction = "left";
 		}
 	}
 	if (39 in keysDown) { // player holding right
-		if (hero.x <= (canvas.width - 32)) {
+		if (hero.x < (canvas.width - 32)  && ! detect_collision(hero.r)) {
 			hero.x += momentum;
 			hero.direction = "right";
 		}
 	}
+}
+
+function detect_collision(points)
+{
+	var pix = cltx.getImageData(points[0], points[1], 1, 1).data;
+	if(pix[0] == 0 && pix[1] == 0 && pix[2] == 0)
+	{
+		return true;
+	}
+	return false;
 }
 
 // Draw everything
@@ -90,8 +116,12 @@ var render = function(delta) {
 	if (bgReady) {
 		ctx.drawImage(bgImage, 0, 0);
 	}
+	if(colBgReady) {
+		cltx.drawImage(colBgImage, 0, 0);
+	}
 	if (heroReady) {
 		ctx.drawImage(heroImage, hero.x, hero.y);
+		cltx.drawImage(heroImage, hero.x, hero.y);
 	}
 	if (monsterReady) {
 		ctx.drawImage(monsterImage, monster.x, monster.y);
@@ -102,7 +132,7 @@ var render = function(delta) {
 	ctx.font = "12px Arial";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
-	ctx.fillText("Hero position: " + hero.x + " " + hero.y + " "
+	ctx.fillText("Hero bb: " + hero.l + " " + hero.r + " " + hero.t + " " + hero.b
 			+ hero.direction, 32, 32);
 	ctx.fillText((1000 / delta) + " fps", 32, 44);
 }
