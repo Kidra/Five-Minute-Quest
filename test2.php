@@ -9,6 +9,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>Game</title>
+  <style type="text/css">body {background: #111;}</style>
   <script type="text/javascript" src="js/input-handler.js"></script>
 </head>
 <body>

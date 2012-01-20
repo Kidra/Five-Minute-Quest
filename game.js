@@ -45,6 +45,9 @@ monsterImage.src = "images/monster.png";
 var hero = {
 	speed : 256,
 	direction : DOWN,
+	moveable: true,
+	conversable: false,
+	in_conversation: false,
 	size: 32,
 	tl: [0, 0],
 	tr: [0, 0],
@@ -55,6 +58,7 @@ var hero = {
 };
 
 var monster = {
+	size: 32,
 	x : 0,
 	y : 0
 }
@@ -71,49 +75,66 @@ var reset = function() {
 
 // Update game objects
 var update = function(modifier) {
-
-	var collide = false;
-	var momentum = Math.round(hero.speed * modifier);
 	
-	hero.tl = [hero.x, hero.y];
-	hero.tr = [hero.x + hero.size, hero.y];
-	hero.bl = [hero.x, hero.y + hero.size];
-	hero.br = [hero.x + hero.size, hero.y + hero.size];
-
-	if (38 in keysDown) { // player holding up
-		if ( ! detect_collision(
-				[ hero.tl[0], hero.tl[1] - 1 ],
-				[ hero.tr[0], hero.tr[1] - 1 ]
-			)) {
-			hero.y -= momentum;
+	if(88 in keysDown && hero.conversable) { // pressed x in conversation mode
+		hero.in_conversation = true;
+		hero.moveable = false;
+	}
+	
+	if(90 in keysDown && hero.in_conversation) {
+		hero.in_conversation = false;
+		hero.moveable = true;
+	}
+	
+	if(hero.moveable)
+	{
+		var collide = false;
+		var momentum = Math.round(hero.speed * modifier);
+		
+		hero.tl = [hero.x, hero.y];
+		hero.tr = [hero.x + hero.size, hero.y];
+		hero.bl = [hero.x, hero.y + hero.size];
+		hero.br = [hero.x + hero.size, hero.y + hero.size];
+	
+		if (38 in keysDown) { // player holding up
 			hero.direction = UP;
+			if ( ! detect_collision(
+					[ hero.tl[0], hero.tl[1] - 1 ],
+					[ hero.tr[0], hero.tr[1] - 1 ]
+				)) {
+				hero.y -= momentum;
+				hero.conversable = false;
+			}
 		}
-	}
-	if (40 in keysDown) { // player holding down
-		if ( ! detect_collision(
-				[ hero.bl[0], hero.bl[1] + 1 ],
-				[ hero.br[0], hero.br[1] + 1 ]
-			)) {
-			hero.y += momentum;
+		if (40 in keysDown) { // player holding down
 			hero.direction = DOWN;
+			if ( ! detect_collision(
+					[ hero.bl[0], hero.bl[1] + 1 ],
+					[ hero.br[0], hero.br[1] + 1 ]
+				)) {
+				hero.y += momentum;
+				hero.conversable = false;
+			}
 		}
-	}
-	if (37 in keysDown) { // player holding left
-		if ( ! detect_collision(
-				[ hero.tl[0] - 1, hero.tl[1] ],
-				[ hero.bl[0] - 1, hero.bl[1] ]
-			)) {
-			hero.x -= momentum;
+		if (37 in keysDown) { // player holding left
 			hero.direction = LEFT;
+			if ( ! detect_collision(
+					[ hero.tl[0] - 1, hero.tl[1] ],
+					[ hero.bl[0] - 1, hero.bl[1] ]
+				)) {
+				hero.x -= momentum;
+				hero.conversable = false;
+			}
 		}
-	}
-	if (39 in keysDown) { // player holding right
-		if ( ! detect_collision(
-				[ hero.tr[0] + 1, hero.tr[1] ],
-				[ hero.br[0] + 1, hero.br[1] ]
-			)) {
-			hero.x += momentum;
+		if (39 in keysDown) { // player holding right
 			hero.direction = RIGHT;
+			if ( ! detect_collision(
+					[ hero.tr[0] + 1, hero.tr[1] ],
+					[ hero.br[0] + 1, hero.br[1] ]
+				)) {
+				hero.x += momentum;
+				hero.conversable = false;
+			}
 		}
 	}
 }
@@ -129,6 +150,11 @@ function detect_collision(point1, point2)
 	var pix = cltx.getImageData(point1[0], point1[1], difference_x, difference_y).data;
 	for(var i = 0; i < pix.length; i += 4)
 	{
+		if(pix[i] == 255 && pix[i+1] == 0 && pix[i+2] == 0)
+		{
+			hero.conversable = true;
+			return true;
+		}
 		if(pix[i] == 0 && pix[i+1] == 0 && pix[i+2] == 0)
 		{
 			return true;
@@ -151,6 +177,8 @@ var render = function(delta) {
 	}
 	if (monsterReady) {
 		ctx.drawImage(monsterImage, monster.x, monster.y);
+		cltx.fillStyle = "rgb(255, 0, 0)";
+		cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
 	}
 
 	// score
@@ -158,9 +186,18 @@ var render = function(delta) {
 	ctx.font = "12px Arial";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
-	ctx.fillText("Hero bb: " + hero.l + " " + hero.r + " " + hero.t + " " + hero.b
-			+ hero.direction, 32, 32);
-	ctx.fillText((1000 / delta) + " fps", 32, 44);
+	if(hero.in_conversation)
+	{
+		ctx.fillStyle = "rgb(250, 250, 250)";
+		ctx.fillRect(0, 288, 384, 96);
+		ctx.fillStyle = "rgb(10, 10, 10)";
+		ctx.font = "18px Arial";
+		ctx.fillText("Hello, I am Mike the troll.", 10, 298);
+		ctx.fillStyle = "rgb(250, 250, 250)";
+		ctx.font = "12px Arial";
+	}
+	ctx.fillText("Press X to converse, Z to cancel!", 32, 32);
+	ctx.fillText(Math.round((1000 / delta)) + " fps", 32, 44);
 }
 
 var main = function() {
