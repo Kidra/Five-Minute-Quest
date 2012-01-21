@@ -182,10 +182,10 @@ var render = function(delta) {
 	if(hero.in_conversation)
 	{
 		ctx.fillStyle = "rgb(250, 250, 250)";
-		ctx.fillRect(0, 288, 384, 96);
+		ctx.fillRect(0, 416, 800, 160);
 		ctx.fillStyle = "rgb(10, 10, 10)";
 		ctx.font = "18px Arial";
-		ctx.fillText("Hello, I am Mike the troll.", 10, 298);
+		ctx.fillText("Hello, I am Mike the troll.", 10, 428);
 		ctx.fillStyle = "rgb(250, 250, 250)";
 		ctx.font = "12px Arial";
 	}
@@ -196,11 +196,8 @@ var render = function(delta) {
 //	cltx.fillRect(camera.x, camera.y, camera.width, camera.height);
 }
 
-var camera = {
-	x: 0,
-	y: 0,
-	width: 320,
-	height: 320
+var dialogManager = {
+	
 };
 
 var main = function() {

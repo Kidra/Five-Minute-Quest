@@ -16,10 +16,13 @@ $level->set_name('Test Level');
 $level->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
 
 $actor_manager = new FMQ\Actors\Actor_Manager();
-
 $actor_manager->add_actor(new FMQ\Actors\Player($url."/json/characters/hero.json"));
-
 $hero = $actor_manager->get_actors();
+
+$conversation_manager = new FMQ\Conversations\Conversation_Manager();
+$conversations = $conversation_manager->load_conversation($url."/json/conversations/mike1.json");
+
+var_dump($conversations);
 
 $background = $level->render_level();
 $collision_map = $level->render_collision_map();

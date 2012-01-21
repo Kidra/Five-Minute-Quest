@@ -13,6 +13,7 @@
 body {background: #111;}
 #gameCanvas {margin:10px auto; border:1px solid #555; display:block;}
 #collisionCanvas {margin:10px auto; border:1px solid #555; display:none;}
+pre {color: #EEE; }
 </style>
   <script type="text/javascript" src="js/input-handler.js"></script>
 </head>
