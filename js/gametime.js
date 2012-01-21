@@ -1,4 +1,4 @@
-var GameTime =
+GameTime =
 {
 	now: null,
 	then: null,

@@ -22,7 +22,7 @@ $hero = $actor_manager->get_actors();
 $conversation_manager = new FMQ\Conversations\Conversation_Manager();
 $conversations = $conversation_manager->load_conversation($url."/json/conversations/mike1.json");
 
-var_dump($conversations);
+// var_dump($conversations);
 
 $background = $level->render_level();
 $collision_map = $level->render_collision_map();

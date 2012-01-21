@@ -1,5 +1,5 @@
 // main game loop that executes as fast as possible
-var main = function()
+main = function()
 {
 	GameTime.now = Date.now();
 	GameTime.delta = GameTime.now - GameTime.then;
