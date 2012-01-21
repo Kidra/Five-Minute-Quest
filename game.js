@@ -95,6 +95,9 @@ var update = function(modifier) {
 				hero.y -= momentum;
 				hero.conversable = false;
 			}
+			if(hero.y <= size) {
+				ctx.translate(0, 0);
+			}
 		}
 		if (40 in keysDown) { // player holding down
 			hero.direction = DOWN;
@@ -187,8 +190,18 @@ var render = function(delta) {
 		ctx.font = "12px Arial";
 	}
 	ctx.fillText("Press X to converse, Z to cancel!", 32, 32);
-	ctx.fillText(Math.round((1000 / delta)) + " fps", 32, 44);
+	ctx.fillText("canvas location: " + Content.heroImage.offsetLeft + " " + canvas.offsetTop, 32, 44);
+//	
+//	cltx.fillStyle = "rgba(255, 0, 0, 0.2)";
+//	cltx.fillRect(camera.x, camera.y, camera.width, camera.height);
 }
+
+var camera = {
+	x: 0,
+	y: 0,
+	width: 320,
+	height: 320
+};
 
 var main = function() {
 	var now = Date.now();

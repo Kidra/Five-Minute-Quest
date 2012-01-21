@@ -2,776 +2,532 @@
 	"Name" : "Level 1",
 	"Size" : 32,
 	"Base_Tile" : "images/tilesets/forest/grass_1.png",
+	"Sprites" : [
+		"images/tilesets/forest/tree_1.png",
+		"images/tilesets/forest/grass_1.png"
+	],
 	"Rows" : [
 		{
 			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0},
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
 			]
 		},
 		{
 			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
 			]
 		},
 		{
 			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
 			]
 		},
 		{
 			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 1, "Height" : 0, "Flag" : 1 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
+			]
+		},
+		{
+			"Tiles" : [
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0},
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 },
+				{ "Sprite" : 0, "Height" : 0, "Flag" : 0 }
 			]
 		}
-		,
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/grass_1.png",
-					"Height" : 0,
-					"Flag"   : 1
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		},
-		{
-			"Tiles" : [
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				},
-				{	
-					"Sprite" : "images/tilesets/forest/tree_1.png",
-					"Height" : 0,
-					"Flag"   : 0
-				}
-			]
-		}
-	
 	]
 }

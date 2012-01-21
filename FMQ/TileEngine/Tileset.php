@@ -4,7 +4,7 @@ namespace FMQ\TileEngine;
 
 class Tileset
 {
-	private $rows = array();
+	private $columns = array();
 	private $collision = array();
 	private $size;
 	private $name;
@@ -32,7 +32,7 @@ class Tileset
 			foreach($column->Tiles as $col => $tile_info)
 			{
     			$tile = new Tile();
-    			$tile->setSprite($tile_info->Sprite);
+    			$tile->setSprite($tiles->Sprites[$tile_info->Sprite]);
     			$tile->setFlag($tile_info->Flag);
     			$tile->setHeight($tile_info->Height);
     			$this->set_tile($tile, $row, $col);
@@ -41,8 +41,8 @@ class Tileset
     			if($tile_info->Flag == 0)
     			{
         			$this->collision[] = array(
-    					($row * $this->get_size()),
-    					($col * $this->get_size())
+    					($col * $this->get_size()),
+    					($row * $this->get_size())
         			);
     			}
 			}
@@ -59,36 +59,36 @@ class Tileset
 	
 	public function set_tile(Tile $tile, $row, $col)
 	{
-		$this->rows[$row][$col] = $tile;
+		$this->columns[$col][$row] = $tile;
 	}
 	
-	public function get_rows()
+	public function get_columns()
 	{
-		return $this->rows;
+		return $this->columns;
 	}
 	
 	public function number_of_rows()
 	{
-		return count($this->get_rows());
+		return count($this->columns[0]);
 	}
 	
 	public function number_of_columns()
 	{
-		return count($this->rows[0]);
+		return count($this->columns);
 	}
 	
 	public function generate_image()
 	{
-		$rows = $this->get_rows();
+		$columns = $this->get_columns();
 		
-    	$image = imagecreate($this->get_size() * $this->number_of_rows(), $this->get_size() * $this->number_of_rows());
+    	$image = imagecreate($this->get_size() * $this->number_of_columns(), $this->get_size() * $this->number_of_rows());
     
-        foreach($rows as $row => $columns)
+        foreach($columns as $column => $rows)
         {
-        	foreach($columns as $col => $tile_info)
+        	foreach($rows as $row => $tile_info)
         	{
         		$tile = imagecreatefrompng($tile_info->getSprite());
-        		imagecopy($image, $tile, $row * $this->get_size(), $col * $this->get_size(), 0, 0, $this->get_size(), $this->get_size());
+        		imagecopy($image, $tile, $column * $this->get_size(), $row * $this->get_size(), 0, 0, $this->get_size(), $this->get_size());
         	}
         }
         
