@@ -60,19 +60,41 @@ FMQ =
 
 		level =
 		{
-			name: "Test Level 1"
+			name: "Test Level 1",
+			npc_list:
+			[
+			 	{
+			 		id: "mike",
+			 		size: 32,
+			 		x: 64,
+			 		y: 64,
+			 		render: function()
+			 		{
+			 			if(GameManager.Content.monsterImage)
+			 			{
+			 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
+			 				cltx.fillStyle = "rgb(255, 0, 0)";
+							cltx.fillRect(this.x, this.y, this.size, this.size);
+			 			}
+			 		},
+			 		update: function()
+			 		{
+			 			
+			 		}
+			 	}
+			]
 		};
 
 		collision = {};
 
-		monster.render = function()
-		{
-			if (GameManager.Content.monsterImage) {
-				ctx.drawImage(GameManager.Content.monsterImage, monster.x, monster.y);
-				cltx.fillStyle = "rgb(255, 0, 0)";
-				cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
-			}
-		};
+//		monster.render = function()
+//		{
+//			if (GameManager.Content.monsterImage) {
+//				ctx.drawImage(GameManager.Content.monsterImage, monster.x, monster.y);
+//				cltx.fillStyle = "rgb(255, 0, 0)";
+//				cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
+//			}
+//		};
 
 		level.render = function()
 		{
@@ -90,8 +112,6 @@ FMQ =
 		
 		hero.x = canvas.width / 2;
 		hero.y = canvas.height / 2;
-		monster.x = 32 + (Math.random() * (canvas.width - 64));
-		monster.y = 32 + (Math.random() * (canvas.height - 64));
 		
 		var sources = {
 			heroImage: 'images/sprites/hero1.png',
@@ -99,12 +119,17 @@ FMQ =
 			colBgImage: collisionBgMap,
 			bgImage: returnedBgImage
 		};
+		
+		
+		NpcManager.load(level.npc_list);
 
 		GameManager.AddToFieldStack(level);
 		GameManager.AddToFieldStack(collision);
-		GameManager.AddToFieldStack(monster);
+		GameManager.AddToFieldStack(NpcManager);
 		GameManager.AddToFieldStack(hero);
-		var NewContent = GameManager.ImageLoader(sources);
+		
+		// load scenario resources into GameManager.Content
+		var NewContent = GameManager.ImageLoader(sources);	
 		for(var attrname in NewContent)
 		{
 			GameManager.Content[attrname] = NewContent[attrname];

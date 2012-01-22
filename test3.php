@@ -38,7 +38,7 @@ var hero = <?php echo $hero?>;
     <script type="text/javascript" src="js/conversation.js"></script>
     <script type="text/javascript" src="js/detect_collision.js"></script>
     <script type="text/javascript" src="js/gametime.js"></script>
+    <script type="text/javascript" src="js/npcmanager.js"></script>
     <script type="text/javascript" src="js/fmq.js"></script>
-    <script type="text/javascript" src="js/core.js"></script>
-    <!--<script type="text/javascript" src="js/initialiser.js"></script>-->
+    <script type="text/javascript" src="js/core.js" defer="true"></script>
 </html>

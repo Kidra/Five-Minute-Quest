@@ -4,6 +4,7 @@ ConversationManager =
 	name: null,
 	next: false,
 	counter: 0,
+	target: null,
 	load: function(conversation)
 	{
 		this.dialog_list = conversation.dialog_list;
@@ -25,6 +26,10 @@ ConversationManager =
 		{
 			GameManager.Content[attrname] = NewContent[attrname];
 		}
+	},
+	setTarget: function(target)
+	{
+		this.target = target;
 	},
 	flush: function()
 	{

@@ -12,6 +12,9 @@ function detect_collision(point1, point2)
 		if(pix[i] == 255 && pix[i+1] == 0 && pix[i+2] == 0)
 		{
 			hero.conversable = true;
+			// set the conversable target by id
+			
+			//ConversationManager.setTarget();
 			return true;
 		}
 		if(pix[i] == 0 && pix[i+1] == 0 && pix[i+2] == 0)

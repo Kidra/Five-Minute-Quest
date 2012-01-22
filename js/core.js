@@ -120,5 +120,6 @@ Core =
 GameTime.then = Date.now();
 Core.generateCanvasLayers();
 Core.CoreImages();
+// loads scenario on pageload
 Core.Scenario.load(FMQ);
 setInterval("Core.Main()", 1);
