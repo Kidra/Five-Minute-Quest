@@ -3,9 +3,9 @@ hero.update = function(modifier)
 	switch(FMQ.state)
 	{
 	case "conversation":
-		if(88 in keysDown && ConversationManager.next)  // advancing conversation
+		if(88 in keysDown)  // advancing conversation
 		{
-			ConversationManager.lock();
+			lockKey(88);
 			ConversationManager.advance();
 		}
 		break;
@@ -19,14 +19,14 @@ hero.update = function(modifier)
 				"name" : "mike1",
 				"dialog_list" : [
 					{
-						"character_left" : "hero1_left.png",
-						"character_right" : "hero2_right.png",
+						"character_left" : "images/dialog/hero1_left.png",
+						"character_right" : "images/dialog/hero2_right.png",
 						"speaker_name" : "Hero",
 						"text" : "So, you come around here often?"
 					},
 					{
-						"character_left" : "hero1_left.png",
-						"character_right" : "hero2_right.png",
+						"character_left" : "images/dialog/hero1_left.png",
+						"character_right" : "images/dialog/hero2_right.png",
 						"speaker_name" : "Mike",
 						"text" : "Nope, first time."
 					}
@@ -34,7 +34,7 @@ hero.update = function(modifier)
 			};
 			
 			ConversationManager.load(conversation);
-			ConversationManager.lock();
+			lockKey(88);
 		}
 		
 		if(hero.moveable)

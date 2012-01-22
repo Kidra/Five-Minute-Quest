@@ -120,4 +120,5 @@ Core =
 GameTime.then = Date.now();
 Core.generateCanvasLayers();
 Core.CoreImages();
+Core.Scenario.load(FMQ);
 setInterval("Core.Main()", 1);

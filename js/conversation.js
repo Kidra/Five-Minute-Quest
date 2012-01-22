@@ -9,16 +9,27 @@ ConversationManager =
 		this.dialog_list = conversation.dialog_list;
 		this.name = conversation.name;
 		this.next = true;
+		
+		var current_dialog = this.dialog_list[this.counter];
+		
+		// load the conversation images
+		var sources =
+		{
+			characterLeftImage: current_dialog.character_left,
+			characterRightImage: current_dialog.character_right
+		};
+		
+		var NewContent = GameManager.ImageLoader(sources);
+		
+		for(var attrname in NewContent)
+		{
+			GameManager.Content[attrname] = NewContent[attrname];
+		}
 	},
 	flush: function()
 	{
 		this.dialog_list.length = 0;
 		this.counter = 0;
-	},
-	lock: function()
-	{
-		this.next = false;
-		setTimeout("ConversationManager.next = true", 500);
 	},
 	advance: function()
 	{
@@ -35,11 +46,10 @@ ConversationManager =
 		else
 		{
 			var current_dialog = this.dialog_list[this.counter];
+			
 			Dialog.Call(
 				current_dialog.speaker_name,
-				current_dialog.text,
-				current_dialog.character_left,
-				current_dialog.character_right
+				current_dialog.text
 			);
 		}
 	}
@@ -47,10 +57,18 @@ ConversationManager =
 
 Dialog =
 {
-	Call: function(name, text, spriteleft, spriteright)
+	Call: function(name, text)
 	{
 		if(GameManager.Content.dialogImage)
 		{
+			if(GameManager.Content.characterLeftImage)
+			{
+				ctx.drawImage(GameManager.Content.characterLeftImage, 40, 160);
+			}
+			if(GameManager.Content.characterRightImage)
+			{
+				ctx.drawImage(GameManager.Content.characterRightImage, 500, 160);
+			}
 			ctx.drawImage(GameManager.Content.dialogImage, 32, 370);
 			ctx.fillStyle = "rgb(10, 10, 10)";
 			ctx.font = "bold 20px Arial";
