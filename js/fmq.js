@@ -16,20 +16,9 @@ FMQ =
 			}
 			break;
 		case "conversation":
-			if(88 in keysDown && ConversationManager.next) { // pressed x in conversation mode
-				FMQ.state = "field_screen";
-				ConversationManager.next = false;
-				hero.conversable = false;
-				setTimeout("hero.conversable = true", 500);
-			}
+			GameManager.UpdateField(modifier);
 			break;
 		case "field_screen":
-			if(90 in Core.KeyboardState && 90 in Core.lastKeyboardState) {
-				console.log("menu held");
-			}
-			if(90 in Core.KeyboardState && ! 90 in Core.lastKeyboardState) {
-				console.log("menu pressed");
-			}
 			GameManager.UpdateField(modifier);
 			break;
 		}
@@ -55,12 +44,6 @@ FMQ =
 			ctx.font = "12px Arial";
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			if(this.state == "conversation")
-			{
-				Dialog.Call("Mike", "Hi, I'm Mike the troll!!");
-				ctx.fillStyle = "rgb(250, 250, 250)";
-				ctx.font = "12px Arial";
-			}
 			ctx.fillText("Press X to converse, Z to cancel!", 32, 32);
 			ctx.fillText("gamestate:" + FMQ.state, 32, 44);
 			break;
