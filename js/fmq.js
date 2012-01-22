@@ -33,6 +33,9 @@ FMQ =
 	{
 		switch(this.state)
 		{
+		case "start_screen":
+			Core.Preloader.render();
+			break;
 		case "loading":
 			
 			break;

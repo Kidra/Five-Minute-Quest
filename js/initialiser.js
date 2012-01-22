@@ -1,7 +1,3 @@
-// create the canvas
-document.body.appendChild(canvas);
-document.body.appendChild(collision_canvas);
-
 DOWN  = 0;
 UP    = (1 * size);
 LEFT  = (2 * size);
@@ -14,21 +10,6 @@ monster = {
 	y : 0
 };
 
-
-// what it says on the tin
-function imageLoader(sources, callback) {
-	var images = [];
-	var loadedImages = 0;
-	var numImages = 0;
-	for (var src in sources) {
-        numImages++;
-    }
-	for (var src in sources) {
-		images[src] = new Image();
-		images[src].src = sources[src];
-	}
-	return images;
-};
 
 hero.x = canvas.width / 2;
 hero.y = canvas.height / 2;
@@ -78,7 +59,7 @@ GameManager.AddToFieldStack(level);
 GameManager.AddToFieldStack(collision);
 GameManager.AddToFieldStack(monster);
 GameManager.AddToFieldStack(hero);
-GameManager.Content = imageLoader(sources);
+GameManager.Content = GameManager.ImageLoader(sources);
 
 GameTime.then = Date.now();
 setInterval(main, 1);

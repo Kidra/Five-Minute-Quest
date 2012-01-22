@@ -21,34 +21,19 @@ pre {color: #EEE; }
   
 </body>
 <script type="text/javascript">
-var canvas = document.createElement("canvas");
-canvas.setAttribute("id", "gameCanvas");
-var ctx    = canvas.getContext("2d");
-
-var collision_canvas = document.createElement("canvas");
-collision_canvas.setAttribute("id", "collisionCanvas");
-var cltx = collision_canvas.getContext("2d");
-
-canvas.width  = 800;
-canvas.height = 576;
-collision_canvas.width  = 800;
-collision_canvas.height = 576;
-
-var size = 32;
-
 
 var returnedBgImage = "<?php echo $background?>";
 var collisionBgMap = "<?php echo $collision_map?>";
 
 var hero = <?php echo $hero?>;
 </script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/ui.js"></script>
-    <script type="text/javascript" src="js/hero.js"></script>
+    <!--<script type="text/javascript" src="js/ui.js"></script>-->
+    <!--<script type="text/javascript" src="js/hero.js"></script>-->
     <script type="text/javascript" src="js/gamemanager.js"></script>
-    <script type="text/javascript" src="js/conversation.js"></script>
-    <script type="text/javascript" src="js/detect_collision.js"></script>
+    <!-- <script type="text/javascript" src="js/conversation.js"></script>--> 
+    <!--<script type="text/javascript" src="js/detect_collision.js"></script>-->
     <script type="text/javascript" src="js/gametime.js"></script>
-    <script type="text/javascript" src="js/fmq.js"></script>
-    <script type="text/javascript" src="js/initialiser.js"></script>
+    <!--<script type="text/javascript" src="js/fmq.js"></script>-->
+    <script type="text/javascript" src="js/core.js"></script>
+    <!--<script type="text/javascript" src="js/initialiser.js"></script>-->
 </html>

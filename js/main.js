@@ -4,8 +4,10 @@ main = function()
 	GameTime.now = Date.now();
 	GameTime.delta = GameTime.now - GameTime.then;
 	
-	FMQ.update( GameTime.delta / 1000 );
-	FMQ.render( GameTime.delta );
+	Core.Preloader.render();
+	
+	//FMQ.update( GameTime.delta / 1000 );
+	//FMQ.render( GameTime.delta );
 	
 	GameTime.then = GameTime.now;
 }
