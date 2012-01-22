@@ -2,12 +2,12 @@
 
 function __autoload($class_name)
 {
-	require_once $class_name.'.php';
+	require_once str_replace('\\', '/', $class_name).'.php';
 }
 
 ini_set('display_errors', '1');
 ini_set('xdebug.var_display_max_depth', '10');
-error_reporting(E_ALL);
+error_reporting(E_ALL|E_STRICT);
 
 $url = getcwd();
 

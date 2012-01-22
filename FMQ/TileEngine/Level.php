@@ -82,7 +82,7 @@ class Level
 		
 		if(is_file(getcwd().$this->get_hashed_name()))
 		{
-			return '/FMQ/cached/'.$this->get_hashed_name().'.png';
+			return 'cached/'.$this->get_hashed_name().'.png';
 		}
 		
 		$image = imagecreate($total_width, $total_height);
@@ -94,9 +94,9 @@ class Level
 			imagecopy($image, $tile, 0, 0, 0, 0, $total_width, $total_height);
 		}
 		
-		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'.png');
+		imagepng($image, getcwd().'/cached/'.$this->get_hashed_name().'.png');
 		
-		return '/FMQ/cached/'.$this->get_hashed_name().'.png';
+		return 'cached/'.$this->get_hashed_name().'.png';
 	}
 	
 	public function render_collision_map()
@@ -120,8 +120,8 @@ class Level
 			imagecopy($image, $tile, $x, $y, 0, 0, 32, 32);
 		}
 		
-		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'_col.png');
+		imagepng($image, 'cached/'.$this->get_hashed_name().'_col.png');
 		
-		return '/FMQ/cached/'.$this->get_hashed_name().'_col.png';
+		return 'cached/'.$this->get_hashed_name().'_col.png';
 	}
 }
