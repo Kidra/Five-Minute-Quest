@@ -39,6 +39,7 @@ FMQ =
 		case "field_screen":
 		case "conversation":
 			GameManager.RenderField();
+			UI.FieldClock();
 
 			// score
 			ctx.fillStyle = "rgb(250, 250, 250)";
@@ -47,7 +48,7 @@ FMQ =
 			ctx.textBaseline = "top";
 			if(this.state == "conversation")
 			{
-				Dialog.Call("Hi, I'm Mike the troll!!");
+				Dialog.Call("Mike", "Hi, I'm Mike the troll!!");
 				ctx.fillStyle = "rgb(250, 250, 250)";
 				ctx.font = "12px Arial";
 			}

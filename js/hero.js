@@ -60,3 +60,11 @@ hero.update = function(modifier)
 		}
 	}
 };
+
+hero.render = function()
+{
+	if (GameManager.Content.heroImage) {
+		ctx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+		cltx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+	}
+};

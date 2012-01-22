@@ -25,7 +25,10 @@ GameManager =
 	{
 		for(var i = 0; i < this.FieldStack.length; ++i)
 		{
-			this.FieldStack[i].render();
+			if(typeof this.FieldStack[i].render === 'function')
+			{
+				this.FieldStack[i].render();
+			}
 		}
 	},
 	UpdateConversation: function()

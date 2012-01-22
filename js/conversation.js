@@ -14,12 +14,17 @@ ConversationManager =
 
 Dialog =
 {
-	Call: function(text)
+	Call: function(name, text)
 	{
-		ctx.fillStyle = "rgb(250, 250, 250)";
-		ctx.fillRect(0, 416, 800, 160);
-		ctx.fillStyle = "rgb(10, 10, 10)";
-		ctx.font = "18px Arial";
-		ctx.fillText(text, 10, 428);
+		if(GameManager.Content.dialogImage)
+		{
+			ctx.drawImage(GameManager.Content.dialogImage, 32, 370);
+			ctx.fillStyle = "rgb(10, 10, 10)";
+			ctx.font = "bold 20px Arial";
+			ctx.fillText(name, 50, 385);
+			ctx.fillStyle = "rgb(250, 250, 250)";
+			ctx.font = "bold 16px Arial";
+			ctx.fillText(text, 50, 430);
+		}
 	}
 };

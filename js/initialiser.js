@@ -42,14 +42,6 @@ level =
 
 collision = {};
 
-hero.render = function()
-{
-	if (GameManager.Content.heroImage) {
-		ctx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-		cltx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-	}
-};
-
 monster.render = function()
 {
 	if (GameManager.Content.monsterImage) {
@@ -74,6 +66,8 @@ collision.render = function()
 };
 
 sources = {
+	dialogImage: 'images/dialog/dialog-window.png',
+	clockImage: 'images/ui/time-window.png',
 	heroImage: 'images/sprites/hero1.png',
 	monsterImage: 'images/monster.png',
 	colBgImage: collisionBgMap,
