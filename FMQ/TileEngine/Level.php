@@ -94,7 +94,7 @@ class Level
 			imagecopy($image, $tile, 0, 0, 0, 0, $total_width, $total_height);
 		}
 		
-		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'.png');
+		imagepng($image, getcwd().'/cached/'.$this->get_hashed_name().'.png');
 		
 		return '/FMQ/cached/'.$this->get_hashed_name().'.png';
 	}
@@ -120,7 +120,7 @@ class Level
 			imagecopy($image, $tile, $x, $y, 0, 0, 32, 32);
 		}
 		
-		imagepng($image, getcwd().'\\cached\\'.$this->get_hashed_name().'_col.png');
+		imagepng($image, getcwd().'/cached/'.$this->get_hashed_name().'_col.png');
 		
 		return '/FMQ/cached/'.$this->get_hashed_name().'_col.png';
 	}

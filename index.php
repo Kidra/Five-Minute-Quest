@@ -2,7 +2,7 @@
 
 function __autoload($class_name)
 {
-	require_once $class_name.'.php';
+	require_once str_replace('\\', '/', $class_name).'.php';
 }
 
 ini_set('display_errors', '1');
