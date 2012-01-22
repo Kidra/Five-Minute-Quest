@@ -43,7 +43,9 @@ var collisionBgMap = "<?php echo $collision_map?>";
 var hero = <?php echo $hero?>;
 </script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/hero.js"></script>
     <script type="text/javascript" src="js/gamemanager.js"></script>
+    <script type="text/javascript" src="js/conversation.js"></script>
     <script type="text/javascript" src="js/detect_collision.js"></script>
     <script type="text/javascript" src="js/gametime.js"></script>
     <script type="text/javascript" src="js/fmq.js"></script>

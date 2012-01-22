@@ -10,70 +10,21 @@ FMQ =
 		case "loading":
 			
 			break;
+		case "start_screen":
+			if(13 in keysDown) { // pressed enter
+				
+			}
+			break;
 		case "conversation":
-			if(88 in keysDown) { // pressed x in conversation mode
+			if(88 in keysDown && ConversationManager.next) { // pressed x in conversation mode
 				FMQ.state = "field_screen";
+				ConversationManager.next = false;
+				hero.conversable = false;
+				setTimeout("hero.conversable = true", 500);
 			}
 			break;
 		case "field_screen":
-			if(88 in keysDown && hero.conversable) {
-				FMQ.state = "conversation";
-			}
-			
-			if(hero.moveable)
-			{
-				var collide = false;
-				var momentum = Math.round(hero.speed * modifier);
-				
-				hero.tl = [hero.x, hero.y];
-				hero.tr = [hero.x + hero.size, hero.y];
-				hero.bl = [hero.x, hero.y + hero.size];
-				hero.br = [hero.x + hero.size, hero.y + hero.size];
-			
-				if (38 in keysDown) { // player holding up
-					hero.direction = UP;
-					if ( ! detect_collision(
-							[ hero.tl[0], hero.tl[1] - 1 ],
-							[ hero.tr[0], hero.tr[1] - 1 ]
-						)) {
-						hero.y -= momentum;
-						hero.conversable = false;
-					}
-					if(hero.y <= size) {
-						ctx.translate(0, 0);
-					}
-				}
-				if (40 in keysDown) { // player holding down
-					hero.direction = DOWN;
-					if ( ! detect_collision(
-							[ hero.bl[0], hero.bl[1] + 1 ],
-							[ hero.br[0], hero.br[1] + 1 ]
-						)) {
-						hero.y += momentum;
-						hero.conversable = false;
-					}
-				}
-				if (37 in keysDown) { // player holding left
-					hero.direction = LEFT;
-					if ( ! detect_collision(
-							[ hero.tl[0] - 1, hero.tl[1] ],
-							[ hero.bl[0] - 1, hero.bl[1] ]
-						)) {
-						hero.x -= momentum;
-						hero.conversable = false;
-					}
-				}
-				if (39 in keysDown) { // player holding right
-					hero.direction = RIGHT;
-					if ( ! detect_collision(
-							[ hero.tr[0] + 1, hero.tr[1] ],
-							[ hero.br[0] + 1, hero.br[1] ]
-						)) {
-						hero.x += momentum;
-						hero.conversable = false;
-					}
-				}
-			}
+			GameManager.UpdateField(modifier);
 			break;
 		}
 	},
@@ -87,35 +38,16 @@ FMQ =
 			break;
 		case "field_screen":
 		case "conversation":
-			if (GameManager.Content.bgImage) {
-				ctx.drawImage(GameManager.Content.bgImage, 0, 0);
-			}
-			if(GameManager.Content.colBgImage) {
-				cltx.drawImage(GameManager.Content.colBgImage, 0, 0);
-			}
-			GameManager.Render();
-//			if (GameManager.Content.heroImage) {
-//				ctx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-//				cltx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-//			}
-			if (GameManager.Content.monsterImage) {
-				ctx.drawImage(GameManager.Content.monsterImage, monster.x, monster.y);
-				cltx.fillStyle = "rgb(255, 0, 0)";
-				cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
-			}
+			GameManager.RenderField();
 
 			// score
 			ctx.fillStyle = "rgb(250, 250, 250)";
 			ctx.font = "12px Arial";
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			if(hero.in_conversation)
+			if(this.state == "conversation")
 			{
-				ctx.fillStyle = "rgb(250, 250, 250)";
-				ctx.fillRect(0, 416, 800, 160);
-				ctx.fillStyle = "rgb(10, 10, 10)";
-				ctx.font = "18px Arial";
-				ctx.fillText("Hello, I am Mike the troll.", 10, 428);
+				Dialog.Call("Hi, I'm Mike the troll!!");
 				ctx.fillStyle = "rgb(250, 250, 250)";
 				ctx.font = "12px Arial";
 			}

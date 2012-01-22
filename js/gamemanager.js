@@ -11,18 +11,35 @@ GameManager =
 	{
 		this.ConversationStack.push(obj);
 	},
-	Draw: function()
+	UpdateField: function(modifier)
 	{
-		for(obj in this.FieldStack)
+		for(var i = 0; i < this.FieldStack.length; ++i)
 		{
-			obj.draw();
+			if(typeof this.FieldStack[i].update === 'function')
+			{
+				this.FieldStack[i].update(modifier);
+			}
 		}
 	},
-	Render: function()
+	RenderField: function()
 	{
 		for(var i = 0; i < this.FieldStack.length; ++i)
 		{
 			this.FieldStack[i].render();
+		}
+	},
+	UpdateConversation: function()
+	{
+		for(var i = 0; i < this.ConversationStack.length; ++i)
+		{
+			this.ConversationStack[i].update();
+		}
+	},
+	RenderConversation: function()
+	{
+		for(var i = 0; i < this.ConversationStack.length; ++i)
+		{
+			this.ConversationStack[i].render();
 		}
 	}
 };
