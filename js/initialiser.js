@@ -25,11 +25,6 @@ function imageLoader(sources, callback) {
     }
 	for (var src in sources) {
 		images[src] = new Image();
-		images[src].onload = function() {
-			if(++loadedImages >= numImages) {
-				//callback(images);
-			}
-		};
 		images[src].src = sources[src];
 	}
 	return images;
@@ -40,6 +35,14 @@ hero.y = canvas.height / 2;
 monster.x = 32 + (Math.random() * (canvas.width - 64));
 monster.y = 32 + (Math.random() * (canvas.height - 64));
 
+hero.render = function()
+{
+	if (GameManager.Content.heroImage) {
+		ctx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+		cltx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+	}
+};
+
 sources = {
 	heroImage: 'images/sprites/hero1.png',
 	monsterImage: 'images/monster.png',
@@ -47,7 +50,8 @@ sources = {
 	bgImage: returnedBgImage
 }
 
-Content = imageLoader(sources);
+GameManager.AddToFieldStack(hero);
+GameManager.Content = imageLoader(sources);
 
 GameTime.then = Date.now();
 setInterval(main, 1);

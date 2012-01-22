@@ -87,18 +87,19 @@ FMQ =
 			break;
 		case "field_screen":
 		case "conversation":
-			if (Content.bgImage) {
-				ctx.drawImage(Content.bgImage, 0, 0);
+			if (GameManager.Content.bgImage) {
+				ctx.drawImage(GameManager.Content.bgImage, 0, 0);
 			}
-			if(Content.colBgImage) {
-				cltx.drawImage(Content.colBgImage, 0, 0);
+			if(GameManager.Content.colBgImage) {
+				cltx.drawImage(GameManager.Content.colBgImage, 0, 0);
 			}
-			if (Content.heroImage) {
-				ctx.drawImage(Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-				cltx.drawImage(Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
-			}
-			if (Content.monsterImage) {
-				ctx.drawImage(Content.monsterImage, monster.x, monster.y);
+			GameManager.Render();
+//			if (GameManager.Content.heroImage) {
+//				ctx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+//				cltx.drawImage(GameManager.Content.heroImage, 0, hero.direction, 32, 32, hero.x, hero.y, 32, 32);
+//			}
+			if (GameManager.Content.monsterImage) {
+				ctx.drawImage(GameManager.Content.monsterImage, monster.x, monster.y);
 				cltx.fillStyle = "rgb(255, 0, 0)";
 				cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
 			}

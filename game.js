@@ -191,9 +191,6 @@ var render = function(delta) {
 	}
 	ctx.fillText("Press X to converse, Z to cancel!", 32, 32);
 	ctx.fillText("canvas location: " + Content.heroImage.offsetLeft + " " + canvas.offsetTop, 32, 44);
-//	
-//	cltx.fillStyle = "rgba(255, 0, 0, 0.2)";
-//	cltx.fillRect(camera.x, camera.y, camera.width, camera.height);
 }
 
 var dialogManager = {
