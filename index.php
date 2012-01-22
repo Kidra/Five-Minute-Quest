@@ -7,7 +7,7 @@ function __autoload($class_name)
 
 ini_set('display_errors', '1');
 ini_set('xdebug.var_display_max_depth', '10');
-error_reporting(E_ALL);
+error_reporting(E_ALL|E_STRICT);
 
 $url = getcwd();
 
