@@ -3,18 +3,17 @@ UP    = (1 * size);
 LEFT  = (2 * size);
 RIGHT = (3 * size);
 
+hero.x = canvas.width / 2;
+hero.y = canvas.height / 2;
+monster.x = 32 + (Math.random() * (canvas.width - 64));
+monster.y = 32 + (Math.random() * (canvas.height - 64));
+
 monster = {
 	id: "mike",
 	size: 32,
 	x : 0,
 	y : 0
 };
-
-
-hero.x = canvas.width / 2;
-hero.y = canvas.height / 2;
-monster.x = 32 + (Math.random() * (canvas.width - 64));
-monster.y = 32 + (Math.random() * (canvas.height - 64));
 
 level =
 {

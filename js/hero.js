@@ -16,7 +16,7 @@ hero.update = function(modifier)
 		hero.br = [hero.x + hero.size, hero.y + hero.size];
 	
 		if (38 in keysDown) { // player holding up
-			hero.direction = UP;
+			hero.direction = Core.Direction.UP;
 			if ( ! detect_collision(
 					[ hero.tl[0], hero.tl[1] - 1 ],
 					[ hero.tr[0], hero.tr[1] - 1 ]
@@ -24,12 +24,9 @@ hero.update = function(modifier)
 				hero.y -= momentum;
 				hero.conversable = false;
 			}
-			if(hero.y <= size) {
-				ctx.translate(0, 0);
-			}
 		}
 		if (40 in keysDown) { // player holding down
-			hero.direction = DOWN;
+			hero.direction = Core.Direction.DOWN;
 			if ( ! detect_collision(
 					[ hero.bl[0], hero.bl[1] + 1 ],
 					[ hero.br[0], hero.br[1] + 1 ]
@@ -39,7 +36,7 @@ hero.update = function(modifier)
 			}
 		}
 		if (37 in keysDown) { // player holding left
-			hero.direction = LEFT;
+			hero.direction = Core.Direction.LEFT;
 			if ( ! detect_collision(
 					[ hero.tl[0] - 1, hero.tl[1] ],
 					[ hero.bl[0] - 1, hero.bl[1] ]
@@ -49,7 +46,7 @@ hero.update = function(modifier)
 			}
 		}
 		if (39 in keysDown) { // player holding right
-			hero.direction = RIGHT;
+			hero.direction = Core.Direction.RIGHT;
 			if ( ! detect_collision(
 					[ hero.tr[0] + 1, hero.tr[1] ],
 					[ hero.br[0] + 1, hero.br[1] ]
