@@ -18,6 +18,8 @@ Core =
 		LEFT  : 64,
 		RIGHT : 96
 	},
+	KeyboardState: null,
+	lastKeyboardState: null,
 	/**
 	 * loads the various canvas layers into the DOM
 	 */
@@ -81,16 +83,14 @@ Core =
 	Main: function()
 	{
 		this.BypassCore = this.Scenario.loaded;
-
 		GameTime.now = Date.now();
 		GameTime.delta = GameTime.now - GameTime.then;
+		this.KeyboardState = keysDown;
 		
 		if(this.BypassCore)
 		{
 			this.Scenario.scenario.update(GameTime.delta / 1000);
 			this.Scenario.scenario.render();
-			//FMQ.update( GameTime.delta / 1000 );
-			//FMQ.render( GameTime.delta );
 		}
 		else
 		{
@@ -98,6 +98,7 @@ Core =
 		}
 		
 		GameTime.then = GameTime.now;
+		this.lastKeyboardState = this.KeyboardState;
 	},
 	Scenario: {
 		loaded: false,

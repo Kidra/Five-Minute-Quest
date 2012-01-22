@@ -24,6 +24,12 @@ FMQ =
 			}
 			break;
 		case "field_screen":
+			if(90 in Core.KeyboardState && 90 in Core.lastKeyboardState) {
+				console.log("menu held");
+			}
+			if(90 in Core.KeyboardState && ! 90 in Core.lastKeyboardState) {
+				console.log("menu pressed");
+			}
 			GameManager.UpdateField(modifier);
 			break;
 		}
