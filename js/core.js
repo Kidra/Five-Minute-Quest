@@ -113,6 +113,10 @@ Core =
 		{
 			this.scenario = null;
 			this.loaded = false;
+		},
+		getState: function()
+		{
+			return this.scenario.state;
 		}
 	}
 };

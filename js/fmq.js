@@ -44,8 +44,7 @@ FMQ =
 			ctx.font = "12px Arial";
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			ctx.fillText("player midpoint: " + (hero.x + 16) + " " + (hero.y + 16), 32, 32);
-			ctx.fillText("gamestate:" + FMQ.state, 32, 44);
+			ctx.fillText("gamestate:" + FMQ.state, 32, 32);
 			break;
 		}
 	},

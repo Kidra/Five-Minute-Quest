@@ -50,8 +50,8 @@ hero.update = function(modifier)
 			if (38 in keysDown) { // player holding up
 				hero.direction = Core.Direction.UP;
 				if ( ! detect_collision(
-						[ hero.tl[0], hero.tl[1] - 1 ],
-						[ hero.tr[0], hero.tr[1] - 1 ]
+						[ hero.tl[0], hero.tl[1] - momentum ],
+						[ hero.tr[0], hero.tr[1] - momentum ]
 					)) {
 					hero.y -= momentum;
 					hero.conversable = false;
@@ -60,8 +60,8 @@ hero.update = function(modifier)
 			if (40 in keysDown) { // player holding down
 				hero.direction = Core.Direction.DOWN;
 				if ( ! detect_collision(
-						[ hero.bl[0], hero.bl[1] + 1 ],
-						[ hero.br[0], hero.br[1] + 1 ]
+						[ hero.bl[0], hero.bl[1] + momentum ],
+						[ hero.br[0], hero.br[1] + momentum ]
 					)) {
 					hero.y += momentum;
 					hero.conversable = false;
@@ -70,8 +70,8 @@ hero.update = function(modifier)
 			if (37 in keysDown) { // player holding left
 				hero.direction = Core.Direction.LEFT;
 				if ( ! detect_collision(
-						[ hero.tl[0] - 1, hero.tl[1] ],
-						[ hero.bl[0] - 1, hero.bl[1] ]
+						[ hero.tl[0] - momentum, hero.tl[1] ],
+						[ hero.bl[0] - momentum, hero.bl[1] ]
 					)) {
 					hero.x -= momentum;
 					hero.conversable = false;
@@ -80,8 +80,8 @@ hero.update = function(modifier)
 			if (39 in keysDown) { // player holding right
 				hero.direction = Core.Direction.RIGHT;
 				if ( ! detect_collision(
-						[ hero.tr[0] + 1, hero.tr[1] ],
-						[ hero.br[0] + 1, hero.br[1] ]
+						[ hero.tr[0] + momentum, hero.tr[1] ],
+						[ hero.br[0] + momentum, hero.br[1] ]
 					)) {
 					hero.x += momentum;
 					hero.conversable = false;
