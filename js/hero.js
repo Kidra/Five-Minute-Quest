@@ -3,14 +3,14 @@ hero.update = function(modifier)
 	switch(FMQ.state)
 	{
 	case "conversation":
-		if(88 in keysDown)  // advancing conversation
+		if(88 in Core.KeyboardState)  // advancing conversation
 		{
 			lockKey(88);
 			ConversationManager.advance();
 		}
 		break;
 	case "field_screen":
-		if(88 in keysDown && hero.conversable) {
+		if(88 in Core.KeyboardState && hero.conversable) {
 			FMQ.state = "conversation";
 			ConversationManager.flush();
 			
@@ -47,7 +47,7 @@ hero.update = function(modifier)
 			hero.bl = [hero.x, hero.y + hero.size];
 			hero.br = [hero.x + hero.size, hero.y + hero.size];
 		
-			if (38 in keysDown) { // player holding up
+			if (38 in Core.KeyboardState) { // player holding up
 				hero.direction = Core.Direction.UP;
 				if ( ! detect_collision(
 						[ hero.tl[0], hero.tl[1] - momentum ],
@@ -57,7 +57,7 @@ hero.update = function(modifier)
 					hero.conversable = false;
 				}
 			}
-			if (40 in keysDown) { // player holding down
+			if (40 in Core.KeyboardState) { // player holding down
 				hero.direction = Core.Direction.DOWN;
 				if ( ! detect_collision(
 						[ hero.bl[0], hero.bl[1] + momentum ],
@@ -67,7 +67,7 @@ hero.update = function(modifier)
 					hero.conversable = false;
 				}
 			}
-			if (37 in keysDown) { // player holding left
+			if (37 in Core.KeyboardState) { // player holding left
 				hero.direction = Core.Direction.LEFT;
 				if ( ! detect_collision(
 						[ hero.tl[0] - momentum, hero.tl[1] ],
@@ -77,7 +77,7 @@ hero.update = function(modifier)
 					hero.conversable = false;
 				}
 			}
-			if (39 in keysDown) { // player holding right
+			if (39 in Core.KeyboardState) { // player holding right
 				hero.direction = Core.Direction.RIGHT;
 				if ( ! detect_collision(
 						[ hero.tr[0] + momentum, hero.tr[1] ],

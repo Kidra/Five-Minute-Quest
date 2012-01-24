@@ -11,7 +11,7 @@ FMQ =
 			
 			break;
 		case "start_screen":
-			if(13 in keysDown) { // pressed enter
+			if(13 in Core.KeyboardState) { // pressed enter
 				
 			}
 			break;
