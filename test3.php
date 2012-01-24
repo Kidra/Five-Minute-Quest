@@ -19,6 +19,7 @@ body { background: #111; }
 pre { color: #EEE; }
 </style>
   <script type="text/javascript" src="js/input-handler.js"></script>
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 <div id="wrapper">

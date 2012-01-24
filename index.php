@@ -11,22 +11,29 @@ error_reporting(E_ALL|E_STRICT);
 
 $url = getcwd();
 
-$level = new FMQ\TileEngine\Level();
-$level->set_name('Test Level');
-$level->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
+$scenario = new FMQ\Scenario\Scenario();
+$scenario->get_level()->set_name('Test Level');
+$scenario->get_level()->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
+$scenario->get_actor_manager()->add_actor(new FMQ\Actors\Player($url."/json/characters/hero.json"));
 
-$actor_manager = new FMQ\Actors\Actor_Manager();
-$actor_manager->add_actor(new FMQ\Actors\Player($url."/json/characters/hero.json"));
-$hero = $actor_manager->get_actors();
+$hero          = $scenario->get_actor_manager()->get_actors();
+$conversations = $scenario->get_conversation_manager()->load_conversation($url."/json/conversations/mike1.json");
+$background    = $scenario->get_level()->render_level();
+$collision_map = $scenario->get_level()->render_collision_map();
+$width         = $scenario->get_level()->get_width();
+$height        = $scenario->get_level()->get_height();
+$hero          = json_encode($hero[0]->render_json());
 
-$conversation_manager = new FMQ\Conversations\Conversation_Manager();
-$conversations = $conversation_manager->load_conversation($url."/json/conversations/mike1.json");
-
-// var_dump($conversations);
-
-$background = $level->render_level();
-$collision_map = $level->render_collision_map();
-$width  = $level->get_width();
-$height = $level->get_height();
-
-$hero = json_encode($hero[0]->render_json());
+// $level = new FMQ\TileEngine\Level();
+// $level->set_name('Test Level');
+// $level->add_tileset(new FMQ\TileEngine\Tileset($url."/json/maps/level1.json"));
+// $actor_manager = new FMQ\Actors\Actor_Manager();
+// $actor_manager->add_actor(new FMQ\Actors\Player($url."/json/characters/hero.json"));
+// $hero = $actor_manager->get_actors();
+// $conversation_manager = new FMQ\Conversations\Conversation_Manager();
+// $conversations = $conversation_manager->load_conversation($url."/json/conversations/mike1.json");
+// $background = $level->render_level();
+// $collision_map = $level->render_collision_map();
+// $width  = $level->get_width();
+// $height = $level->get_height();
+// $hero = json_encode($hero[0]->render_json());

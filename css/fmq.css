@@ -1,0 +1,27 @@
+body {
+	background: #111;
+}
+
+#wrapper {
+	margin: 10px auto;
+	display: block;
+	position: relative;
+	width: 800px;
+	height: 576px;
+}
+
+#gameCanvas,
+#overlayCanvas,
+#collisionCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#collisionCanvas {
+	display: none;
+}
+
+pre {
+	color: #EEE;
+}

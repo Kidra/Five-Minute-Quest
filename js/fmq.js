@@ -81,20 +81,30 @@ FMQ =
 			 		{
 			 			
 			 		}
+			 	},
+			 	{
+			 		id: "mike2",
+			 		size: 32,
+			 		x: 320,
+			 		y: 320,
+			 		render: function()
+			 		{
+			 			if(GameManager.Content.monsterImage)
+			 			{
+			 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
+			 				cltx.fillStyle = "rgb(255, 0, 0)";
+							cltx.fillRect(this.x, this.y, this.size, this.size);
+			 			}
+			 		},
+			 		update: function()
+			 		{
+			 			
+			 		}
 			 	}
 			]
 		};
 
 		collision = {};
-
-//		monster.render = function()
-//		{
-//			if (GameManager.Content.monsterImage) {
-//				ctx.drawImage(GameManager.Content.monsterImage, monster.x, monster.y);
-//				cltx.fillStyle = "rgb(255, 0, 0)";
-//				cltx.fillRect(monster.x, monster.y, monster.size, monster.size);
-//			}
-//		};
 
 		level.render = function()
 		{

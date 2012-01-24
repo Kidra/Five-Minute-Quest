@@ -6,6 +6,7 @@ class Level
 {
 	protected $tilesets        = array();
 	protected $collision_layer = array();
+	protected $sources;
 	protected $name;
 	protected $width;
 	protected $height;
@@ -33,6 +34,16 @@ class Level
 	public function get_width()
 	{
 		return $this->width;
+	}
+	
+	public function add_source($source)
+	{
+		$this->sources[] = $source;
+	}
+	
+	public function get_sources()
+	{
+		return $this->sources;
 	}
 	
 	public function set_height($height)

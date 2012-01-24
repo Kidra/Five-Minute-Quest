@@ -17,6 +17,13 @@ abstract class Actor
     protected $br = array();
 
     protected $conversable;
+    
+    protected $dialog_faces = array(
+        'default' => '',
+    	'happy'   => '',
+    	'sad'     => '',
+    	'angry'   => ''		
+    );
 
     protected function get_id()
     {
@@ -26,6 +33,16 @@ abstract class Actor
     protected function get_name()
     {
         return $this->name;
+    }
+    
+    protected function get_dialog_faces()
+    {
+    	return $this->dialog_faces;
+    }
+    
+    protected function set_dialog_faces(array $faces)
+    {
+    	$this->dialog_faces = $faces;
     }
 
     protected function get_speed()
