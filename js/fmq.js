@@ -44,7 +44,7 @@ FMQ =
 			ctx.font = "12px Arial";
 			ctx.textAlign = "left";
 			ctx.textBaseline = "top";
-			ctx.fillText("Press X to converse, Z to cancel!", 32, 32);
+			ctx.fillText("player midpoint: " + (hero.x + 16) + " " + (hero.y + 16), 32, 32);
 			ctx.fillText("gamestate:" + FMQ.state, 32, 44);
 			break;
 		}
@@ -60,49 +60,52 @@ FMQ =
 
 		level =
 		{
-			name: "Test Level 1",
-			npc_list:
-			[
-			 	{
-			 		id: "mike",
-			 		size: 32,
-			 		x: 64,
-			 		y: 64,
-			 		render: function()
-			 		{
-			 			if(GameManager.Content.monsterImage)
-			 			{
-			 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
-			 				cltx.fillStyle = "rgb(255, 0, 0)";
-							cltx.fillRect(this.x, this.y, this.size, this.size);
-			 			}
-			 		},
-			 		update: function()
-			 		{
-			 			
-			 		}
-			 	},
-			 	{
-			 		id: "mike2",
-			 		size: 32,
-			 		x: 320,
-			 		y: 320,
-			 		render: function()
-			 		{
-			 			if(GameManager.Content.monsterImage)
-			 			{
-			 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
-			 				cltx.fillStyle = "rgb(255, 0, 0)";
-							cltx.fillRect(this.x, this.y, this.size, this.size);
-			 			}
-			 		},
-			 		update: function()
-			 		{
-			 			
-			 		}
-			 	}
-			]
+			name: "Test Level 1"
 		};
+		
+		npc_list =
+		[
+		 	{
+		 		id: "mike",
+		 		x: 64,
+		 		y: 64,
+		 		width: 32,
+		 		height: 32,
+		 		render: function()
+		 		{
+		 			if(GameManager.Content.monsterImage)
+		 			{
+		 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
+		 				cltx.fillStyle = "rgb(255, 0, 0)";
+						cltx.fillRect(this.x, this.y, this.width, this.height);
+		 			}
+		 		},
+		 		update: function()
+		 		{
+		 			
+		 		}
+		 	},
+		 	{
+		 		id: "mike2",
+		 		x: 320,
+		 		y: 320,
+		 		width: 32,
+		 		height: 32,
+		 		render: function()
+		 		{
+		 			if(GameManager.Content.monsterImage)
+		 			{
+		 				ctx.drawImage(GameManager.Content.monsterImage, this.x, this.y);
+		 				cltx.fillStyle = "rgb(255, 0, 0)";
+						cltx.fillRect(this.x, this.y, this.width, this.height);
+		 			}
+		 		},
+		 		update: function()
+		 		{
+		 			
+		 		}
+		 	}
+		];
 
 		collision = {};
 
@@ -131,7 +134,7 @@ FMQ =
 		};
 		
 		
-		NpcManager.load(level.npc_list);
+		NpcManager.load(npc_list);
 
 		GameManager.AddToFieldStack(level);
 		GameManager.AddToFieldStack(collision);
